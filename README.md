@@ -1,2 +1,2 @@
 # UCM-Registration-Helper
-a Registration Helper for UC Merced
+A Registration Helper for UC Merced
