@@ -1,5 +1,7 @@
 # UCM-Registration-Helper
+
 A Registration Helper for UC Merced
 
-Hello 
+Hello
 
+console.log("test")
