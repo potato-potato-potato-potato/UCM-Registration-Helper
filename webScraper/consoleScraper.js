@@ -1,3 +1,12 @@
+// Note that the CRN scraping part of the project will be put on hold
+// for a while since it is not very high priority. If and when this
+// file is revisited, though, the goals are to improve the sleep to
+// test if the page is ready and sleep for longer if necessary. In
+// addition, it should be made simpler to merge the CRNs scraped
+// from multiple runs of scrapePage. How complicated everything
+// needs to be depends somewhat on whether or not the assumption is
+// made that no deletions or additions to the list of courses or the
+// list of CRNs within the UC Merced database.
 async function scrapePage(output, pageLimit) {
 	// output is reference to object data is recorded to
 	// pageLimit determines maximum number of pages to scrape
