@@ -1,6 +1,9 @@
 // This file is intended for use on the page https://reg-prod.ec.ucmerced.edu/StudentRegistrationSsb/ssb/registration
 // Currently, it only provides some basic functions and does not implement the actual scraping.
 
+// Sometimes, this code just does not work and trying to create the iframe results in a 500 error
+// I believe this is just due to a cookie expiring, so close the window, reopen, and try again
+
 // Short for get subject course combo list
 async function getSCCList(pageOffset, sleep, txt_term = "202510", pageMaxSize = 10) {
 	// Does not remove all HTML, but suffices
