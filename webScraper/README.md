@@ -18,3 +18,4 @@ SCC, subject course combo, is a string that is required to scrape for CRNs.
 It requires the school website to be open in a real browser, but it just gets JSON data instead of simulating clicks through pages.
 - **fetchCrn.mjs** is a simple script that takes a single CRN and returns an object that contains all information about the corresponding course.
 - **data/scc.json** is an object with SCC data that I scraped locally using iframeScraper.js.
+- **data/ref.json** is an object which has a purpose explained in iframeScraper.js.

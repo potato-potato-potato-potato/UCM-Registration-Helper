@@ -52,6 +52,10 @@ async function querySCC(pageOffset, sleep, txt_term = "202510", pageMaxSize = 50
 // { unfinished: ["AE", "ANTH"...], data: { "WRI": { "001": [10965, 10966...] } } }
 // scc is just the output of getSCCList and does not get mutated
 // Not very maintanable code, but that shouldn't be a problem
+
+// Please use await when calling this function and wrap it in basic error handling
+// Be sure to log if there are any errors at all, since it's difficult to verify
+// whether the CRN list is exhaustive
 async function appendCRN(ref, scc, txt_term = "202510", pageMaxSize = 50) {
 	if (ref.unfinished.length === 0) {
 		return;
