@@ -26,13 +26,13 @@ export async function fetchCrn(crn, term = "202510") {
 	const pathHead = "https://reg-prod.ec.ucmerced.edu/StudentRegistrationSsb/ssb/searchResults/";
 	const pathTail = `?term=${term}&courseReferenceNumber=${crn}`;
 	let output = {};
-	queries.forEach(async query => {
+	for (const query of queries) {
 		const response = await fetch(pathHead + query + pathTail);
 		if (query == "getFacultyMeetingTimes") {
 			output[query] = await response.json();
 		} else {
 			output[query] = await response.text();
 		}
-	});
+	}
 	return output;
 }
