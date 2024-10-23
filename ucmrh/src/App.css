@@ -13,8 +13,16 @@
   }
 }
 
+#search {
+  color: rgb(1, 39, 97);
+  background-color: #bbbbbb;
+  position: absolute;
+  top: (500px); left: (500px);
+  height: 10vh;
+}
+
 .App-header {
-  background-color: #282c34;
+  background-color: grey;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +33,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #0F2D52;
 }
 
 @keyframes App-logo-spin {
