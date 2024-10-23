@@ -3,7 +3,14 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
+  color: blue;
+  position: absolute; /* Position the element relative to its nearest ancestor */
+    top: 5vh;             /* Align to the top */
+    left: 20vh;           /* Align to the right */
+    margin: 10px;       /* Optional: Add some space from the edges */
+    width: 100px;       /* Set the size of the logo (adjust as needed) */
+    height: auto;       /* Maintain the aspect ratio */
   pointer-events: none;
 }
 
@@ -15,14 +22,16 @@
 
 #search {
   color: rgb(1, 39, 97);
-  background-color: #bbbbbb;
-  position: absolute;
-  top: (500px); left: (500px);
-  height: 10vh;
+  background-color: #e5ec03;
+  position: absolute; 
+    top: 7vh;            
+    right: 20vh;           
+    margin: 10px;       
+    width: 100px; 
 }
 
 .App-header {
-  background-color: grey;
+  background-color: rgb(220, 220, 220);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -34,13 +43,4 @@
 
 .App-link {
   color: #0F2D52;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

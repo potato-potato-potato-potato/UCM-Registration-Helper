@@ -1,6 +1,6 @@
 function MyButton(){
     return(
-        <button> Button </button>
+        <button> Search </button>
     )
 }
 export default MyButton;
