@@ -1,6 +1,6 @@
 import logo from './logo1.svg';
 import './App.css';
-import MyButton from './MyButton';
+import MyButton from './logo1Button';
 
 function App() {
   return (
@@ -10,14 +10,14 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <button id="search"> Button </button>
+        <button id="home"> Button </button>
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          
         </a>
       </header>
     </div>
