@@ -20,8 +20,8 @@ export default function PreferredDay(){
     const renderDays = days.map((day) => (
         <div key={day} className="preferred-day-item">
             <div className="preferred-day-sub-container">
-                <div className="preferred-day-icon">S
-                    <p className="preferred-day-letter">{day[0]}</p>
+                <div className="circle-icon">S
+                    <p className="circle-icon-letter">{day[0]}</p>
                 </div>
                 <h3 className="preferred-day">{day}</h3>
             </div>
