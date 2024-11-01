@@ -27,6 +27,31 @@ export function parseHtmlTable(htmlString) {
 	return result;
 }
 
+// Simple parser for line separated colon delimited span data
+// Intended for getEnrollmentInfo
+const matchSpanBrHr = /<br>|<hr>|<span[^>]*>[\s\S]*?<\/span>/g;
+export function parseSpanEntries(htmlString) {
+	let result = {};
+	const matches = htmlString.matchAll(matchSpanBrHr);
+	let currentProperty = null;
+	for (const match of matches) {
+		if (match[0] == "<hr>" || match[0] == "<br>") {
+			continue; // Could be changed to treat <br> as significant
+		}
+		const innerText = match[0].substring(match[0].indexOf(">") + 1, match[0].length - 7);
+		if (currentProperty == null) {
+			if (innerText[innerText.length-1] != ":") {
+				throw new Error(`Expected colon at end of ${innerText}`);
+			}
+			currentProperty = innerText.substring(0, innerText.length - 1);
+		} else {
+			result[currentProperty] = innerText;
+			currentProperty = null;
+		}
+	}
+	return result;
+}
+
 // [\s\S]*? matches arbitrary characters while minimizing length
 // Not including g tag on this, not sure if that's best practice
 const matchTable = /<table[^>]*>[\s\S]*?<\/table>/;
