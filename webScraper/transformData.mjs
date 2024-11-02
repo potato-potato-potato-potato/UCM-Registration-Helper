@@ -21,3 +21,16 @@ export function pareRef(json) {
 	}
 	return output;
 }
+
+// Takes in data similar to ./data/pared.json
+// Output sorted array of CRNs
+export function sortCrns(json) {
+	let output = [];
+	for (const subjectCode in json) {
+		for (const courseNumber in json[subjectCode]) {
+			output.push(...json[subjectCode][courseNumber]);
+		}
+	}
+	output.sort((a, b) => a - b);
+	return output;
+}
