@@ -4,6 +4,7 @@
 // For best results, first navigate to a state with a table of data first
 // Sometimes, this code just does not work and trying to create the iframe results in a 500 error
 // I believe this is just due to a cookie expiring, so close the window, reopen, and try again
+// Sometimes, the data property in the JSON is null, so just retry if that happens
 
 // This file could be refactored a lot to make it more maintainable,
 // but since it's not being imported by anything else in the project,
