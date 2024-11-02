@@ -21,8 +21,8 @@ quryString =[
 ]
 
 
-def dummyDataGen(args, quryStringindex = 5):
-    for i in range(10000, int(args)):
+def dummyDataGen(args, quryStringindex = 0):
+    for i in range(10000,10000+ int(args)):
         r = requests.get(f"https://reg-prod.ec.ucmerced.edu{quryString[quryStringindex]}?term=202510&courseReferenceNumber={i}")
         if r.ok:
             print(f"CRN:{i} -------------------------")
@@ -30,7 +30,7 @@ def dummyDataGen(args, quryStringindex = 5):
         time.sleep(1)
 
 
-dummyDataGen(10)
+dummyDataGen(5)
 
 
 
