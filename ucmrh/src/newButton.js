@@ -1,14 +1,11 @@
-import React from 'react'
-import { CookiesProvider, useCookies } from 'react-cookie'
+import React from "react";
 
-function newButton(){
-    return(
-    <button onClick={clearCookie}>Clear Button</button>
-    )
+function newButton() {
+  return <button> </button>;
 }
 
-function clearCookie(){
-console.log("log")
+function clearCookie() {
+  console.log("log");
 }
 
 export default newButton;

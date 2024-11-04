@@ -1,7 +1,7 @@
 import logo from "./logo1.svg";
 import "./App.css";
 import MyButton from "./logo1Button";
-import newButton from "./newButton";
+import NewButton from "./newButton";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <button id="home"> Button </button>
-        <newButton />
+        <NewButton />
         <a
           className="App-link"
           href="https://reactjs.org"
