@@ -1,6 +1,7 @@
-import logo from './logo1.svg';
-import './App.css';
-import MyButton from './logo1Button';
+import logo from "./logo1.svg";
+import "./App.css";
+import MyButton from "./logo1Button";
+import newButton from "./newButton";
 
 function App() {
   return (
@@ -11,14 +12,13 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <button id="home"> Button </button>
+        <newButton />
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          
-        </a>
+        ></a>
       </header>
     </div>
   );
