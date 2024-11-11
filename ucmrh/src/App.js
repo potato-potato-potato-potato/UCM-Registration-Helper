@@ -1,14 +1,8 @@
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
-import LogoButton from './logoButton.js'
-
-
+import LogoButton from './logoButton.js';
+import { BrowserRouter as Router , Routes, Route, } from "react-router-dom";
 import Home from "./pages";
-import Calendar from './pages/calendar'
+import Calendar from './pages/calendar';
 
 function App() {
   return (
