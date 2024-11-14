@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 
-export class calendar extends Component {
+export class Calendar extends Component {
   render() {
     return (
         <div>hello</div>
@@ -10,4 +10,4 @@ export class calendar extends Component {
 }
     
 
-export default (calendar)
+export default Calendar;
