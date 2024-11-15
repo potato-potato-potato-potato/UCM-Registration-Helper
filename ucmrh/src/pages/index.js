@@ -1,35 +1,36 @@
 import React from 'react'
+
 // import PreferredDay from '../components/preferred-day'; 
 import CenterClassCard from '../components/center-class-card'; 
 import Classes from "../components/pared.json"
 
+
+import PreferredDay from '../components/preferred-day'; 
+import TimeSelector from '../components/StartingTime';
+import NewButton from '../components/newButton';
+
+import ConfirmButton from "../components/generate"
+
+import "./index.css"
+
 export const index = () => {
 
   return (
-    <>
-      {/* <PreferredDay /> */}
 
-      <CenterClassCard classes={Classes}/>
-      
-      {/* <div className="App">
-         <header className="App-header">
-          
-           <p>
-             Edit <code>src/App.js</code> and save to reload.
-           </p>
-           <a
-             className="App-link"
-             href="https://reactjs.org/"
-             target="_blank"
-             rel="noopener noreferrer"
-           >
-             Learn React
-           </a>
-         </header>
-      </div> */}
-    </>
-    
-  )
+  <><CenterClassCard classes={Classes}/></>
+		<div className="App">
+				<div className='preferences'>
+					<NewButton/>
+					<PreferredDay/>
+					<TimeSelector/>
+				</div>
+				<div className='center'></div>
+				<div className='right'>
+				<ConfirmButton/>
+
+			</div>
+		</div>
+	)
 }
 
 

@@ -1,0 +1,11 @@
+.preferences {
+	display: flex;
+	flex-direction: column;	
+	width: 30%;	
+	height: 100%;
+	left:0;
+	top: 0;
+	gap: 20px;
+	align-items: center;
+	padding: 20px;
+}

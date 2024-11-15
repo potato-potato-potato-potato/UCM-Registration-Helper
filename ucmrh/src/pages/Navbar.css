@@ -28,7 +28,9 @@
   .navbar-center .nav-links a {
     color: #fff;
     text-decoration: none;
+    padding: 10px;
   }
+ 
   
   .navbar-right {
     display: flex;
@@ -44,7 +46,11 @@
   }
   
   /*below is the css for the logo home button */
-#logo {
-    height: 5vh;
 
+  #logo {
+	  height: 5vh;
+	  position: relative; 
+	  top: 0vh;            
+	  left: 5vh;
   }
+

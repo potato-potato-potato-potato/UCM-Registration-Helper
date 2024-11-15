@@ -10,6 +10,7 @@ import {
 
 import Home from "./pages";
 import Calendar from './pages/calendar';
+import Planner from './pages/planner';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route path='/calendar' element={<Calendar />} />
+        <Route path='/planner' element={<Planner/>} />
       </Routes>
     </Router>
 
