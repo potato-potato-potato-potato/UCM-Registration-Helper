@@ -1,20 +1,15 @@
 import React from 'react';
 import Cookies from 'js-cookie';
 
-import 'App.css' 
-import Card from './SchuduleCard' 
-import { wait } from '@testing-library/user-event/dist/utils';
+import './App.css' 
 
 function calendar(){
 	const schudle  = Cookies.get("schudle")
-	const monday = []
-	const tuesday= []
-	const wednesday= []
-	const thursday= []
+	const monday = [111]
+	const tuesday= ["test"]
+	const wednesday= ["test 2","aaaaaaaaaaaa"]
+	const thursday= ["hello"]
 	const friday= []
-	for (let i = 0; i < schudle.length; i++){
-			
-	}
 	return(
 		<div class = "box">
 			<div>{monday}</div>	
