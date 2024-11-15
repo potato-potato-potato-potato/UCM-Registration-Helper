@@ -5,7 +5,7 @@ import './App.css'
 
 function calendar(){
 	const schudle  = Cookies.get("schudle")
-	const monday = [111]
+	const monday = [111,"abc"]
 	const tuesday= ["test"]
 	const wednesday= ["test 2","aaaaaaaaaaaa"]
 	const thursday= ["hello"]
