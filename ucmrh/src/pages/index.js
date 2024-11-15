@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PreferredDay from '../components/preferred-day'; 
 export const index = () => {
   return (
     <div className="App">
@@ -8,6 +8,7 @@ export const index = () => {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+				<PreferredDay/>
         <a
           className="App-link"
           href="https://reactjs.org/"
