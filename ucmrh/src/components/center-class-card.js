@@ -48,10 +48,17 @@ export default function CenterClassCard( {classes} ){
 	const allClasses = [...allClassesCrn.entries(), ...allClassesName.entries()];
 	const filteredResults = []
 	const re = new RegExp(searchTerm, "i"); 
+	//added a limit of 20 here bc is slow on first char
+	let searchLimit = 0;
 	for(const [key,value] of allClasses){
-		if(re.test(key)){
-			filteredResults.push(<SearchResult k={key} v={value}/>)
+		if(searchLimit > 20){
+			break;
 		}
+		if(re.test(key)){
+			searchLimit += 1;
+			filteredResults.push(<SearchResult k={key} v={value}/>);
+		}
+
 	}
 
     
