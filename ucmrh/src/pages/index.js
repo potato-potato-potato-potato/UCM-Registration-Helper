@@ -15,17 +15,18 @@ import "./index.css"
 
 export const index = () => {
 
-  return (
+	return (
 
-  <><CenterClassCard classes={Classes}/></>
 		<div className="App">
-				<div className='preferences'>
-					<NewButton/>
-					<PreferredDay/>
-					<TimeSelector/>
-				</div>
-				<div className='center'></div>
-				<div className='right'>
+			<div className='preferences'>
+				<NewButton/>
+				<PreferredDay/>
+				<TimeSelector/>
+			</div>
+			<div className='center'>
+				<CenterClassCard classes={Classes}/>
+			</div>
+			<div className='right'>
 				<ConfirmButton/>
 
 			</div>

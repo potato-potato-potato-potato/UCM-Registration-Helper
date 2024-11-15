@@ -9,3 +9,8 @@
 	align-items: center;
 	padding: 20px;
 }
+
+.App {
+	display: flex;
+	flex-direction: row;
+}
