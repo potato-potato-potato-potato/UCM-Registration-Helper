@@ -1,26 +1,27 @@
-import logo from "./logo1.svg";
-import "./App.css";
-import MyButton from "./logo1Button";
-import NewButton from "./newButton";
+import './App.css';
+import Navbar from './pages/navbar.js';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+
+
+import Home from "./pages";
+import Calendar from './pages/calendar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <button id="home"> Button </button>
-        <NewButton />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        ></a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route path='/calendar' element={<Calendar />} />
+      </Routes>
+    </Router>
+
   );
 }
 
