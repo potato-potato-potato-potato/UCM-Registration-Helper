@@ -1,7 +1,7 @@
 import React from "react";
-
+import './App.css'
 function newButton() {
-  return <button> </button>;
+  return <button id="clearButton">clear selected</button>;
 }
 
 function clearCookie() {
