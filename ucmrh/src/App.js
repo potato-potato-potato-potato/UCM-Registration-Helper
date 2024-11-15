@@ -9,7 +9,7 @@ import {
 
 
 import Home from "./pages";
-import Calendar from './pages/calendar'
+import Calendar from './pages/calendar';
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
         <Route path='/calendar' element={<Calendar />} />
       </Routes>
     </Router>
+
   );
 }
 
