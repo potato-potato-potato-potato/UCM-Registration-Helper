@@ -1,5 +1,9 @@
 * {
     font-family: sans-serif;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -68,6 +72,16 @@
 
 
                                         /* Component specific styles */
+
+
+/* center class card and search styles */
+.center-class-card-and-search-container {
+    width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 
 /* center class cards styles */
@@ -145,4 +159,38 @@
 
 .preferred-day-check-box:checked {
     accent-color: rgb(98,85,139);
+}
+
+
+
+/* Search Bar styles */
+.search-parent {
+    display: flex;
+    margin: 10px 0;
+}
+
+.search-bar {
+    width: 650px;
+    height: 59px;
+    background-color: rgb(235,230,240);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    font-size: large;
+    padding: 20px;
+}
+
+.search-icon-container {
+    background-color: rgb(235,230,240);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height: 59px;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search-icon {
+    cursor: pointer;
+    height: 70%;
 }
