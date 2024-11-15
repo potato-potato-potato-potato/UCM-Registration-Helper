@@ -49,6 +49,17 @@
     width: 70px;
 }
 
+.add-and-img {
+    display: flex;
+}
+
+.add-button {
+    margin: 30px 20px;
+    font-size: large;
+    cursor: pointer;
+    background-color: white;
+}
+
 
 /* general Circle Icon styles */
 .circle-icon {

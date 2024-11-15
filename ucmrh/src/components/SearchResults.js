@@ -1,4 +1,8 @@
-function SearchResult({k,v}){
+import Cookies from "js-cookie"
+
+
+function SearchResult({k,v, newCookie}){
+
 	if(typeof k === "number"){
 		return(
 			<div key={v.crn} className="class-card-container center-wide">
@@ -13,8 +17,17 @@ function SearchResult({k,v}){
 					</div>
 				</div>
 
-				<div className="shapes-logo-container">
-					<img className="shapes-logo" src="https://www.svgrepo.com/show/415636/basic-shape-ui.svg" alt="shapes logo"></img>
+				<div  className="add-and-img">
+					<button className="add-button" onClick={() => {
+
+						addCookie(`addClass-${v.crn}`, {subject: v.subject, number: v.number, crn: v.crn});
+						newCookie()
+
+						}}>Add +</button>
+
+					<div className="shapes-logo-container">
+						<img className="shapes-logo" src="https://www.svgrepo.com/show/415636/basic-shape-ui.svg" alt="shapes logo"></img>
+					</div>
 				</div>
 			</div>
 		)
@@ -42,5 +55,10 @@ function SearchResult({k,v}){
 
 	}
 }
+
+const addCookie = (name, value) => {
+	Cookies.set(name, value);
+}
+
 
 export default SearchResult;

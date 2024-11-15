@@ -2,7 +2,7 @@ import "./App.css"
 import { useEffect, useState } from 'react'
 import SearchResult from "./SearchResults";
 
-export default function CenterClassCard( {classes} ){
+export default function CenterClassCard( {classes, newCookie} ){
 
 	const [allClassesCrn, setAllClassesCrn] = useState([]);
 	const [allClassesName, setAllClassesName] = useState([]);
@@ -50,12 +50,12 @@ export default function CenterClassCard( {classes} ){
 	const re = new RegExp(searchTerm, "i"); 
 	for(const [key,value] of allClasses){
 		if(re.test(key)){
-			filteredResults.push(<SearchResult k={key} v={value}/>)
+			filteredResults.push(<SearchResult k={key} v={value} newCookie={newCookie}/>)
 		}
 	}
 
     
-
+	
 
 
 	return (
