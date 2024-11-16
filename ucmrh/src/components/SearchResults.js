@@ -20,10 +20,10 @@ function SearchResult({k,v, newCookie}){
 				<div  className="add-and-img">
 					<button className="add-button" onClick={() => {
 
-						addCookie(`addClass-${v.crn}`, {subject: v.subject, number: v.number, crn: v.crn});
+						addCookie(`${v.crn}`, v.crn);
 						newCookie()
 
-						}}>Add +</button>
+					}}>Add +</button>
 
 					<div className="shapes-logo-container">
 						<img className="shapes-logo" src="https://www.svgrepo.com/show/415636/basic-shape-ui.svg" alt="shapes logo"></img>
@@ -46,8 +46,18 @@ function SearchResult({k,v, newCookie}){
 					</div>
 				</div>
 
-				<div className="shapes-logo-container">
-					<img className="shapes-logo" src="https://www.svgrepo.com/show/415636/basic-shape-ui.svg" alt="shapes logo"></img>
+				<div  className="add-and-img">
+					<button className="add-button" onClick={() => {
+
+						addCookie(`${v.subject}${v.number}`, v.crn.join("-"));
+						newCookie()
+
+					}}>Add +</button>
+
+
+					<div className="shapes-logo-container">
+						<img className="shapes-logo" src="https://www.svgrepo.com/show/415636/basic-shape-ui.svg" alt="shapes logo"></img>
+					</div>
 				</div>
 			</div>
 
