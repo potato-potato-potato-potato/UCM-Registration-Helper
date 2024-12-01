@@ -22,6 +22,7 @@ const queries = [
 	"getSectionAttributes"
 ];
 
+// Only use for testing, prefer querySsb to get specific data
 export async function fetchCrn(crn, term = "202510") {
 	const pathHead = "https://reg-prod.ec.ucmerced.edu/StudentRegistrationSsb/ssb/searchResults/";
 	const pathTail = `?term=${term}&courseReferenceNumber=${crn}`;
@@ -35,4 +36,11 @@ export async function fetchCrn(crn, term = "202510") {
 		}
 	}
 	return output;
+}
+
+export async function querySsb(query, crn, term) {
+	const pathHead = "https://reg-prod.ec.ucmerced.edu/StudentRegistrationSsb/ssb/searchResults/";
+	const pathTail = `?term=${term}&courseReferenceNumber=${crn}`;
+	const response = await fetch(pathHead + query + pathTail);
+	return await response.text();
 }

@@ -28,17 +28,26 @@ export function parseHtmlTable(htmlString) {
 }
 
 // Simple parser for line separated colon delimited span data
-// Intended for getEnrollmentInfo
-const matchSpanBrHr = /<br>|<hr>|<span[^>]*>[\s\S]*?<\/span>/g;
+// Intended for getEnrollmentInfo and getClassDetails
+const matchSpanBrHr = /[^>]*<br\/?>|<hr>|<span[^>]*>[\s\S]*?<\/span>/g;
 export function parseSpanEntries(htmlString) {
 	let result = {};
 	const matches = htmlString.matchAll(matchSpanBrHr);
 	let currentProperty = null;
 	for (const match of matches) {
-		if (match[0] == "<hr>" || match[0] == "<br>") {
+		if (match[0] == "<hr>") {
 			continue; // Could be changed to treat <br> as significant
 		}
-		const innerText = match[0].substring(match[0].indexOf(">") + 1, match[0].length - 7);
+		let innerText;
+		if (match[0].endsWith("<br/>") || match[0].endsWith("<br>")) {
+			innerText = match[0].substring(0, match[0].lastIndexOf("<"));
+			innerText = innerText.replace(/^\s+|\s+$/g, "");
+			if (innerText == "") {
+				continue;
+			}
+		} else {
+			innerText = match[0].substring(match[0].indexOf(">") + 1, match[0].length - 7);
+		}
 		if (currentProperty == null) {
 			if (innerText[innerText.length-1] != ":") {
 				throw new Error(`Expected colon at end of ${innerText}`);
